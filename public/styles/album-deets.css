@@ -1,0 +1,110 @@
+/* General Page Styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #121212; /* Dark background for a cozy feel */
+  color: #f1f1f1;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* Album Cover */
+img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+/* Album Title */
+h3 {
+  font-size: 28px;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+/* Release Date */
+p {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-bottom: 25px;
+}
+
+/* Tracks Section */
+h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #282828;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+/* Track Item Box */
+div {
+  background: #1e1e1e;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+div:hover {
+  transform: translateY(-3px);
+}
+
+/* Track Name */
+div p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Review Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input Box - Bigger & Comfortable */
+input[type="text"] {
+  width: 80%;
+  max-width: 500px;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #2a2a2a;
+  color: #f1f1f1;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #888;
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1db954; /* Spotify green */
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1aa34a;
+}

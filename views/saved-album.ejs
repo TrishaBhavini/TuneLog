@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/saved_album.css">
+  <link rel="icon" type="image/x-icon" href="/images/icon.png">
+  <title>Saved Albums</title>
+</head>
+<body>
+  <div class="albums">
+  <% if (albums && albums.items) { %>
+  <% albums.items.forEach(function(item){ %>
+    <div class="album">
+      <a href="/album/<%=item.album.id%>"><img src="<%=item.album.images[0]?.url %>" alt="<%= item.album.name%>">
+      <h3><%=item.album.name%></h3></a>
+      <p><%=item.album.artists.map(a=>a.name).join(",")%></p>
+    </div>
+  <% }) %>
+  <% } else { %>
+    <p>No album found.</p>
+  <%}%>
+  </div> 
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/album-deets.css">
+  <link rel="icon" type="image/x-icon" href="/images/icon.png">
+  <title>Album Details</title>
+</head>
+<body>
+    <img src="<%=album.images[0]?.url%>" alt="<%=album.name%>">
+    <h3><%=album.name%></h3>
+    <p><%=album.release_date%></p>
+    <form method="POST" action="/album/<%=album.id%>/review">
+                <input type="text" name="albumreview" placeholder="How Does This Album Make You Feel?">
+                <button type="submit">Submit</button>
+    </form>
+    <h2>Tracks</h2>
+
+    <% album.tracks.items.forEach(function(item) {%>
+        <div class="">
+            <p><%=item.name%></p>
+            <form method="POST" action="/track/<%=item.id%>/review">
+                <input type="text" name="trackreview" placeholder="How Does This Track Make You Feel?">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    <%})%>
+</body>
+</html>
+
