@@ -34,7 +34,7 @@ app.set('view engine','ejs');
 
 var client_id = process.env.CLIENT_ID;
 var client_secret=process.env.CLIENT_SECRET;
-var redirect_uri = 'http://127.0.0.1:3000/callback';
+const redirect_uri = process.env.REDIRECT_URI;
 
 app.get("/",(req,res)=>{
   res.render("login.ejs");
