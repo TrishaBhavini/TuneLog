@@ -24,7 +24,7 @@ const db = new pg.Client({
 db.connect();
 
 app.use(session({
-  secret: "supersecretkey",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }));
