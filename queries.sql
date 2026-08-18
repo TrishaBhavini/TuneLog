@@ -32,6 +32,5 @@ CREATE TABLE track_review (
     album_id TEXT NOT NULL,
     review TEXT NOT NULL,
     PRIMARY KEY (track_id, user_id),
-    FOREIGN KEY (user_id) REFERENCES user_info(spotify_id),
-    FOREIGN KEY (album_id) REFERENCES album_review(album_id)
+    FOREIGN KEY (album_id,user_id) REFERENCES album_review(album_id,user_id)
 );
