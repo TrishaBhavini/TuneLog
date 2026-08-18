@@ -8,7 +8,7 @@ import session from "express-session";
 dotenv.config();
 
 const app=express();
-const port=3000;
+const port = process.env.PORT || 3000;
 
 const db = new pg.Client({
   user: "postgres",
@@ -286,8 +286,8 @@ app.get('/refresh_token', async (req, res) => {
   }
 });
 
-app.listen(port,()=>{
-  console.log("Server is running on port.");
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 
